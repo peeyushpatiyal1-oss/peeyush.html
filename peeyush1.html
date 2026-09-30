@@ -1,235 +1,447 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Arena | Ultimate Gamer & Esports Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Arena | Ultimate Gamer & Esports Hub</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    header p {
+      color: #38bdf8;
+      font-size: 1.15rem;
+      font-weight: bold;
+    }
+
+    blockquote {
+      background-color: #334155;
+      border-left: 5px solid #ef4444;
+      padding: 14px;
+      margin: 15px 0;
+      font-style: italic;
+      color: #f8fafc;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .rules-alert {
+      background-color: #451a1a;
+      border: 2px solid #ef4444;
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 12px;
+      color: #ffffff;
+    }
+
+    mark {
+      background-color: #ef4444;
+      color: #ffffff;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .prize-container {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-top: 15px;
+      gap: 15px;
+    }
+
+    .prize-card {
+      background-color: #334155;
+      border: 1px solid #475569;
+      border-radius: 8px;
+      padding: 16px;
+      width: 32%;
+    }
+
+    .prize-card h3 {
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .prize-amount {
+      color: #38bdf8;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .prize-card small {
+      color: #cbd5e1;
+    }
+
+    details {
+      background-color: #334155;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    summary {
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    details p {
+      margin-top: 10px;
+      color: #e2e8f0;
+    }
+
+    .media-box {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    figure {
+      margin-bottom: 25px;
+      background-color: #334155;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #475569;
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: #e2e8f0;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 320px;
+      border: 2px solid #475569;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    caption {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #ffffff;
+      font-size: 1.1rem;
+    }
+
+    fieldset {
+      border: 1px solid #475569;
+      background-color: #1e293b;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    legend {
+      color: #38bdf8;
+      padding: 0 10px;
+      font-weight: bold;
+      font-size: 1.05rem;
+    }
+
+    .form-item {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: #f1f5f9;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px;
+      background-color: #0f172a;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      color: #ffffff;
+      font-size: 0.95rem;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid #38bdf8;
+      border-color: #38bdf8;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+      transform: scale(1.2);
+    }
+
+    .checkbox-label {
+      display: inline;
+      font-weight: normal;
+      color: #e2e8f0;
+    }
+
+    button {
+      background-color: #ef4444;
+      color: #ffffff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #dc2626;
+    }
+  </style>
 </head>
 <body>
 
-<div align="center">
   <header>
-    <h1>🎮 Apex Arena Esports Championship</h1>
-    <h3>Inter-College LAN Tournament &mdash; Winter Season 2026</h3>
+   <center> <h1>🎮 Apex Arena Esports Championship</h1></center>
+   <center> <p>Inter-College LAN Tournament &mdash; Winter Season 2026</p></center>
   </header>
-</div>
 
-<hr size="4">
-
-<div>
   <nav>
-    <center>
-      <a href="#about">About</a> |
-      <a href="#games">Featured Games</a> |
-      <a href="#steps">How to Join</a> |
-      <a href="#schedule">Schedule</a> |
-      <a href="#rules">Important Rules</a> |
-      <a href="#gallery">Media & Clips</a> |
-      <a href="#map">Venue Map</a> |
-      <a href="#leaderboard">Leaderboard</a> |
-      <a href="#register">Register Squad</a>
-    </center>
+    <a href="#about">About</a> |
+    <a href="#prizes">Prizes</a> |
+    <a href="#rules">Rules</a> |
+    <a href="#games">Games</a> |
+    <a href="#steps">Join</a> |
+    <a href="#schedule">Schedule</a> |
+    <a href="#gallery">Media</a> |
+    <a href="#map">Venue</a> |
+    <a href="#leaderboard">Leaderboard</a> |
+    <a href="#register">Register</a>
   </nav>
-</div>
 
-<hr>
+  <main class="container">
 
-<div id="about">
-  <center><h2>About The Championship</h2></center>
-  <p>Welcome to Apex Arena, organized in partnership with <abbr title="Electronic Sports League">ESL</abbr> and regional gaming guilds.
-  Compete for a prize pool of <strong>₹5,00,000</strong> across PC, mobile, and console platforms.</p>
-  <p>Watch daily live matches, tactical breakdowns, and behind-the-scenes player interviews.</p>
+    <section id="about">
+      <h2>About The Championship</h2>
+      <p>Welcome to <strong>Apex Arena</strong>, organized in partnership with <abbr title="Electronic Sports League">ESL</abbr> and regional gaming guilds. Compete across PC, mobile, and console platforms under official competitive LAN standards.</p>
+      <p>Watch daily live matches, tactical breakdowns, and behind-the-scenes player interviews.</p>
+      <blockquote cite="https://esports.gg">
+        "Victory is not about reflexes alone; it's about strategy, communication, and heart under pressure."
+      </blockquote>
+    </section>
 
-  <blockquote cite="https://esports.gg">
-    "Victory is not about reflexes alone; it's about strategy, communication, and heart under pressure."
-  </blockquote>
-</div>
+    <section id="prizes">
+      <h2>Tournament Prize Pool</h2>
+      <p>Total cash pool of <strong>₹5,00,000</strong> distributed directly to winning rosters:</p>
+      <div class="prize-container">
+        <div class="prize-card">
+          <h3>🥇 1st Place</h3>
+          <p class="prize-amount">₹2,50,000</p>
+          <small>Trophy + Pro Gear</small>
+        </div>
+        <div class="prize-card">
+          <h3>🥈 2nd Place</h3>
+          <p class="prize-amount">₹1,50,000</p>
+          <small>Medals + Merch</small>
+        </div>
+        <div class="prize-card">
+          <h3>🥉 3rd Place</h3>
+          <p class="prize-amount">₹1,00,000</p>
+          <small>Gaming Headsets</small>
+        </div>
+      </div>
+    </section>
 
-<hr>
+    <section id="rules">
+      <h2>Tournament Gear & Rules</h2>
+      <p><strong>Official 240Hz gaming monitors and RTX-powered rigs will be provided.</strong></p>
+      <p><em>All players must report to the venue 45 minutes before match call time.</em></p>
+      <div class="rules-alert">
+        <mark>Anti-Cheat Notice:</mark> Third-party crosshair overlays, macros, and scripts will result in an immediate permanent ban.
+      </div>
+    </section>
 
-<div id="rules">
-  <h2>Tournament Gear & Rules</h2>
-  <p>
-    <strong>Official 240Hz gaming monitors and RTX-powered rigs will be provided.</strong>
-    <br>
-    <em>All players must report to the venue 45 minutes before match call time.</em>
-    <br>
-    <mark>Third-party crosshair overlays, macros, and scripts will result in an immediate permanent ban.</mark>
-  </p>
-</div>
+    <section id="games">
+      <h2>Top Tournament Titles</h2>
+      <ul>
+        <li>Valorant (5v5 Tactical Shooter)</li>
+        <li>Battlegrounds Mobile India (Squad Battle Royale)</li>
+        <li>Tekken 8 (1v1 Fighting Championship)</li>
+        <li>Counter-Strike 2 (5v5 Bomb Defusal)</li>
+      </ul>
+    </section>
 
-<hr>
+    <section id="steps">
+      <h2>Steps to Compete</h2>
+      <ol>
+        <li>Form a verified 5-player squad (plus 1 optional substitute)</li>
+        <li>Submit your team registration in the form below</li>
+        <li>Join our official Discord server for lobby codes and referee checks</li>
+        <li>Collect your physical player badge at the arena desk</li>
+      </ol>
+    </section>
 
-<div id="games">
-  <h2>Top Tournament Titles</h2>
-  <ul type="disc">
-    <li>Valorant (5v5 Tactical Shooter)</li>
-    <li>Battlegrounds Mobile India (Squad Battle Royale)</li>
-    <li>Tekken 8 (1v1 Fighting Championship)</li>
-    <li>Counter-Strike 2 (5v5 Bomb Defusal)</li>
-  </ul>
-</div>
+    <section id="schedule">
+      <h2>Tournament Schedule (click to expand)</h2>
+      <details>
+        <summary>Day 1 — Group Stage & Qualifiers</summary>
+        <p>Knockout matches start at 10:00 AM. 32 teams compete down to the Top 8.</p>
+      </details>
+      <details>
+        <summary>Day 2 — Semifinals & Cosplay Contest</summary>
+        <p>Main-stage matches with live casters, accompanied by community cosplay showcases.</p>
+      </details>
+      <details>
+        <summary>Day 3 — Grand Finals & Trophy Presentation</summary>
+        <p>Best-of-5 championship match, trophy handover, and the LAN afterparty with live DJ.</p>
+      </details>
+    </section>
 
-<hr>
+    <section id="gallery">
+      <h2>Media & Clips</h2>
+      <div class="media-box">
+        <figure>
+          <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=700&q=80" alt="Esports gaming tournament stage arena" width="650" loading="lazy">
+          <figcaption>Official Main Stage LAN Setup at Apex Arena</figcaption>
+        </figure>
 
-<div id="steps">
-  <h2>Steps to Compete</h2>
-  <ol type="1" start="1">
-    <li>Form a verified 5-player squad (plus 1 optional substitute)</li>
-    <li>Submit your team registration in the form below</li>
-    <li>Join our official Discord server for lobby codes and referee checks</li>
-    <li>Collect your physical player badge at the arena desk</li>
-  </ol>
-</div>
+        <figure>
+          <video controls width="650"  preload="metadata">
+            <source src="c:\Users\Peeyush\Downloads\gameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>LAN Tournament Gameplay & Highlights</figcaption>
+        </figure>
 
-<hr>
+        <figure>
+          <audio controls preload="metadata">
+            <source src="c:\Users\Peeyush\Downloads\pubg_boy.mp3" type="audio/ogg">
+        
+            Your browser does not support the audio tag.
+          </audio>
+          <figcaption>In-Game Gunfire & Combat Audio Effect</figcaption>
+        </figure>
+      </div>
+    </section>
 
-<div id="schedule">
-  <h2>Tournament Schedule (click to expand)</h2>
-  <details>
-    <summary>Day 1 — Group Stage & Qualifiers</summary>
-    <p>Knockout matches start at 10:00 AM. 32 teams compete down to the Top 8.</p>
-  </details>
-  <details>
-    <summary>Day 2 — Semifinals & Cosplay Contest</summary>
-    <p>Main-stage matches with live casters, accompanied by community cosplay showcases.</p>
-  </details>
-  <details>
-    <summary>Day 3 — Grand Finals & Trophy Presentation</summary>
-    <p>Best-of-5 championship match, trophy handover, and the LAN afterparty with live DJ.</p>
-  </details>
-</div>
+    <section id="map">
+      <h2>Arena Location</h2>
+      <iframe
+        title="Esports Stadium Location Map"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=75.695%2C31.245%2C75.715%2C31.260&layer=mapnik"
+        loading="lazy">
+      </iframe>
+    </section>
 
-<hr>
+    <section id="leaderboard">
+      <h2>Top Clan Standings</h2>
+      <table>
+        <caption>Championship Points Table</caption>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Clan / Team Name</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1</td>
+            <td>Shadow Syndicate</td>
+            <td>1,420</td>
+          </tr>
+          <tr>
+            <td>#2</td>
+            <td>Viper Gaming</td>
+            <td>1,280</td>
+          </tr>
+          <tr>
+            <td>#3</td>
+            <td>Ghost Protocol</td>
+            <td>1,150</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-<div>
-  <h2>Discord Community</h2>
-  <p>
-    <a href="https://discord.com" target="_blank" rel="noopener">
-      Click here to join the official Discord server for live bracket updates</a>
-  </p>
-</div>
+    <section id="register">
+      <h2>Register for the Tournament</h2>
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Player & Squad Details</legend>
 
-<hr>
+          <div class="form-item">
+            <label for="name">In-Game Name (IGN)</label>
+            <input type="text" id="name" name="player_ign" placeholder="e.g. Phoenix99" required>
+          </div>
 
-<div id="gallery" align="center">
-  <h2>Arena Sneak Peek</h2>
-  <figure>
-    <img src="https://picsum.photos/400/250"
-         alt="Esports arena main stage with colorful stage lights"
-         width="400" height="250" loading="lazy">
-    <figcaption>Main stage lighting test inside the arena hall</figcaption>
-  </figure>
+          <div class="form-item">
+            <label for="email">College / Personal Email</label>
+            <input type="email" id="email" name="user_email" placeholder="gamer@example.com" required>
+          </div>
 
-  <h2>Hype Reel Video</h2>
-  <figure>
-    <video controls width="400" poster="https://picsum.photos/400/225"
-           preload="metadata" loop>
-      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <figcaption>Best clutch highlights from last season's finals</figcaption>
-  </figure>
+          <div class="form-item">
+            <label for="phone">Captain WhatsApp Contact</label>
+            <input type="tel" id="phone" name="phone_no" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+          </div>
 
-  <h2>Tournament Anthem</h2>
-  <audio controls preload="metadata" loop>
-    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"
-     type="audio/mpeg">
-    Your browser does not support the audio tag.
-  </audio>
-</div>
+          <div class="form-item">
+            <label for="description">Clan / Team Name</label>
+            <input type="text" id="description" name="clan_name" placeholder="e.g. Phantom Esports" required>
+          </div>
 
-<hr>
+          <div class="form-item">
+            <label for="game">Primary Tournament Game</label>
+            <select id="game" name="game">
+              <option value="val">Valorant (5v5)</option>
+              <option value="bgmi">BGMI (Squad Battle Royale)</option>
+              <option value="tekken">Tekken 8 (1v1)</option>
+              <option value="cs2">Counter-Strike 2 (5v5)</option>
+            </select>
+          </div>
 
-<div id="map">
-  <center>
-    <h2>Arena Location</h2>
-    <iframe
-      title="Esports Stadium Location Map"
-      src="https://www.openstreetmap.org/export/embed.html?bbox=75.695%2C31.245%2C75.715%2C31.260&layer=mapnik"
-      width="400" height="300" loading="lazy">
-    </iframe>
-  </center>
-</div>
+          <div class="form-item">
+            <label for="message">Roster Details & Discord IDs</label>
+            <textarea id="message" name="roster" rows="4" placeholder="List all 5 players and Discord tags..."></textarea>
+          </div>
 
-<hr>
+          <div class="form-item">
+            <input type="checkbox" id="agree" name="agree" value="yes" required>
+            <label for="agree" class="checkbox-label">I agree to fair play, anti-cheat, and LAN code of conduct</label>
+          </div>
 
-<div id="leaderboard" align="center">
-  <h2>Top Clan Standings</h2>
-  <table border="1" cellpadding="8" cellspacing="0">
-    <caption><b>Championship Points Table</b></caption>
-    <thead>
-      <tr>
-        <th>Rank</th>
-        <th>Clan / Team Name</th>
-        <th>Points</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>#1</td>
-        <td>Shadow Syndicate</td>
-        <td>1,420</td>
-      </tr>
-      <tr>
-        <td>#2</td>
-        <td>Viper Gaming</td>
-        <td>1,280</td>
-      </tr>
-      <tr>
-        <td>#3</td>
-        <td>Ghost Protocol</td>
-        <td>1,150</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+          <button type="submit">Submit Registration</button>
+        </fieldset>
+      </form>
+    </section>
 
-<hr>
+  </main>
 
-<div id="register" align="center">
-  <h2>Register for the Tournament</h2>
-  <form action="registered.html" method="GET">
-    <fieldset>
-      <legend>Player & Squad Details</legend>
-
-      <label for="name">In-Game Name (IGN)</label><br>
-      <input type="text" id="name" name="player_ign" placeholder="e.g. Phoenix99"><br><br>
-
-      <label for="description">Clan / Team Name</label><br>
-      <input type="text" id="description" name="clan_name" placeholder="e.g. Phantom Esports"><br><br>
-
-      <label for="game">Primary Tournament Game</label><br>
-      <select id="game" name="game">
-        <option value="val">Valorant (5v5)</option>
-        <option value="bgmi">BGMI (Squad Battle Royale)</option>
-        <option value="tekken">Tekken 8 (1v1)</option>
-        <option value="cs2">Counter-Strike 2 (5v5)</option>
-      </select><br><br>
-
-      <label for="message">Roster Details & Discord IDs</label><br>
-      <textarea id="message" name="roster" rows="4" cols="30" placeholder="List all 5 players and Discord tags...">Captain: Gamer#1234
-Player 2: Ace#5678
-Player 3: Ghost#9999</textarea><br><br>
-
-      <input type="checkbox" id="agree" name="agree" value="yes">
-      <label for="agree">I agree to fair play, anti-cheat, and LAN code of conduct</label><br><br>
-
-      <button type="submit">Submit Registration</button>
-    </fieldset>
-  </form>
-</div>
-
-<hr size="4">
-
-<div align="center">
   <footer>
     <address>
       Apex Arena Gaming Center &mdash; Cyber Block 4, Sector 12 &mdash;
       <a href="mailto:support@apexarena.gg">support@apexarena.gg</a>
     </address>
   </footer>
-</div>
 
 </body>
 </html>
